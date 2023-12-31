@@ -31,8 +31,29 @@ echo "Enter 1st number"
 read num1
 echo "Enter 2nd number"
 read num2
+while [ $num2 = 0 ];
+do
+echo "Enter 2nd number"
+read num2
 divi=$(($num1/$num2))
-echo "Division of number $num1 and $num2 is $divi"
-else
-echo "Entered wrong option"
+done
 fi
+
+# if [[ $num2 -eq 0 ]]
+# then
+# echo "Entered number is 0, Enter the number greater than 0"
+# echo "Enter 1st number"
+# read k
+# echo "Enter 2nd number"
+# read b
+# d=$(($k/$b))
+# echo "Division of number $k and $b is $d"
+
+# elif [[ $num2 -gt 0 ]]
+# then
+# divi=$(($num1/$num2))
+# echo "Division of number $num1 and $num2 is $divi"
+# fi
+# else
+# echo "Entered wrong option"
+# fi
