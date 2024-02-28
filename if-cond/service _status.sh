@@ -19,3 +19,20 @@ then
 echo "Service $serv already is running"
 
 fi
+
+
+====================================================================================================
+## storing running and stopped services in file
+
+#!/bin/bash
+echo "Enter the file path to store stopped services"
+read fil1
+service --status-all|grep stopped|awk '{print $1}' >> $fil1
+ls -ltr $fil1
+
+
+echo "Enter the file path to store running services"
+read fil2
+service --status-all|grep running|awk '{print $1}' >> $fil2
+ls -ltr $fil2
+
